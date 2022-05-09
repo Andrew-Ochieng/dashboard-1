@@ -1,32 +1,19 @@
 <template>
     <div id="body">
-        <div class="mt-8 mx-8 md:p-6 p-3 border-2 rounded-lg">
+        <div class="mt-8 md:p-8 p-4 border-2 rounded-lg w-full">
             <div>
                 <h3 class="md:py-3 py-2 md:text-xl font-extrabold">Delivery Address</h3>
             </div>
 
             <table class="min-w-full">
-                <thead v-bind:key="address.id" v-for="address in address" class="border-b text-md text-gray-900 text-left">
+                <thead v-bind:key="details.id" v-for="details in details" class="border-b text-md text-gray-900 text-left">
                     <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100 text-sm">
-                        <th class="p-2 md:text-md">Order Created</th>
-                        <th class="p-2 text-right">{{address.line}}</th>
-                    </tr>
-                    <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100 text-sm">
-                        <th class="p-2 md:text-md">Building Name</th>
-                        <th class="p-2 text-right">{{address.building}}</th>
-                    </tr>
-                    <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100 text-sm">
-                        <th class="p-2 md:text-md">Street</th>
-                        <th class="p-2 text-right">{{address.street}}</th>
-                    </tr>
-                    <tr class="border-b transition duration-300 ease-in-out hover:bg-gray-100 text-sm">
-                        <th class="p-2 md:text-md">Postcode Address</th>
-                        <th class="p-2 text-right">{{address.postcode}}</th>
+                        <th class="p-2 md:text-md">{{details.name}}</th>
+                        <th class="p-2 text-right">{{details.address}}</th>
                     </tr>
                 </thead>
             </table>
         </div>
-    <!-- <OrderSummary v-bind:address="addresss"/> -->
 
 
 
@@ -40,15 +27,24 @@ import AvatarOne from "../icons/avatar1.png"
         name: 'ItemSummary',
         data(){
             return {
-               address: [
-                 {
-                    line: '12, Brooklyn Road',
-                    building: 'James Brown Court',
-                    street: 'Brooklyn Road',
-                    postcode: '30306'
-                 }
-                   
-               ],
+                details: [
+                    {
+                        name: 'Order Created',
+                        address: '21, Brooklyn Road'
+                    },
+                    {
+                        name: 'Building Name',
+                        address: 'South NY Court'
+                    },
+                    {
+                        name: 'Street',
+                        address: '  Brooklyn Road'
+                    },
+                    {
+                        name: 'Post Address',
+                        address: '20206'
+                    }
+                ]
             }
         }
     }

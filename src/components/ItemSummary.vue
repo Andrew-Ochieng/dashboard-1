@@ -1,10 +1,10 @@
 <template>
     <div id="body">
-        <div class=" md:mt-16 mt-8 mx-8 md:p-10 p-4 border-2 rounded-lg">
+        <div class=" md:mt-16 mt-8 md:p-8 p-4 border-2 rounded-lg w-full">
             <table class="min-w-full">
-                <thead class="border-b text-md font-extrabold text-gray-900 text-left">
+                <thead class="border-b md:text-lg font-extrabold text-gray-900 text-left">
                     <tr class="">
-                        <th class="md:px-6 px-2 md:py-4 py-3 md:text-xl">Items Summary</th>
+                        <th class="md:px-6 px-2 md:py-4 py-3 md:text-xl text-lg">Items Summary</th>
                         <th class="md:px-6 px-2 md:py-4 py-3">QTY</th>
                         <th class="md:px-6 px-2 md:py-4 py-3">Price</th>
                         <th class="md:px-6 px-2 md:py-4 py-3">Total Price</th>
@@ -20,7 +20,7 @@
                         </td>
                         <td class="md:px-6 px-2 md:py-4 py-3 whitespace-nowrap">{{order.qty}}</td>
                         <td class="md:px-6 px-2 md:py-4 py-3 whitespace-nowrap">{{order.price}}</td>
-                        <td class="md:px-6 px-2 md:py-4 py-3 whitespace-nowrap">{{order.totalPrice}}</td>
+                        <td class="md:px-6 px-2 md:py-4 py-3 whitespace-nowrap">{{order.total}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import AvatarOne from "../icons/avatar1.png"
-import AvatarTwo from "../icons/avatar1.png"
-import AvatarThree from "../icons/avatar1.png"
+// import AvatarOne from "../icons/avatar1.png"
+// import AvatarTwo from "../icons/avatar1.png"
+// import AvatarThree from "../icons/avatar1.png"
 
 
     export default {
@@ -48,21 +48,21 @@ import AvatarThree from "../icons/avatar1.png"
                      name: 'Milk',
                      qty: 'x1',
                      price: '$80',
-                     totalPrice: '$80'
+                     total: '$80'
                  },
                  {
                      icon: 'avatar2.png',
                      name: 'Rice',
                      qty: 'x2',
                      price: '$120',
-                     totalPrice: '$240'
+                     total: '$240'
                  },
                  {
                      icon: 'avatar3.png',
                      name: 'Sugar',
                      qty: 'x3',
                      price: '$100',
-                     totalPrice: '$300'
+                     total: '$300'
                  }
                    
                ] 

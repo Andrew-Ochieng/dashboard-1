@@ -1,10 +1,10 @@
 <template>
-  <div class="md:flex gap-8">
-    <div>
+  <div class="md:flex md:gap-32 justify-center md:mx-16 mx-8">
+    <div class="md:selection:mx-4">
       <ItemSummary />
       <CustomerOrderSummary />
     </div>
-    <aside class="align-right">
+    <aside class="align-right md:mx-8">
       <OrderSummary />
       <DeliveryAddress />
     </aside>
